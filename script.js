@@ -14,7 +14,8 @@ function Employee(name, age, jobTitle) {
 	this._jobTitle=jobTitle;
 }
 
-// Add methods of Person constructor fxn which are in Person prototype object 
+// Add methods of Person constructor fxn which are in Person prototype object using shallow copy
+// so that any method created after a while is accessible by Employee objects
 Employee.prototype={...Person.prototype}
 
 Employee.prototype.jobGreet=function(){
